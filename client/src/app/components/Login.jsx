@@ -29,7 +29,7 @@ export default function Login({ onLogin }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: playerName,
+          name: playerName.trim(),
           code: code.trim().toUpperCase()
         }),
       });
@@ -38,38 +38,6 @@ export default function Login({ onLogin }) {
       
       if (!response.ok) {
         throw new Error(data.message || 'Failed to join group');
-      }
-
-      onLogin(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleProctorLogin = async () => {
-    if (!code.trim()) return;
-    
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch('/api/groups', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: 'PROCTOR',
-          code: code.trim().toUpperCase()
-        }),
-      });
-
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.message || 'Failed to join group as proctor');
       }
 
       onLogin(data);
@@ -123,16 +91,7 @@ export default function Login({ onLogin }) {
             disabled={!code.trim() || isLoading}
             className={styles.button}
           >
-            {isLoading ? 'Joining...' : 'Join as Participant'}
-          </button>
-          
-          <button
-            type="button"
-            onClick={handleProctorLogin}
-            disabled={!code.trim() || isLoading}
-            className={`${styles.button} ${styles.proctorButton}`}
-          >
-            {isLoading ? 'Joining...' : 'Join as Proctor'}
+            {isLoading ? 'Joining...' : 'Enter the Arena'}
           </button>
         </div>
       </form>

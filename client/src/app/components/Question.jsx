@@ -154,15 +154,15 @@ export default function Question({ userInfo, socket, currentGroup }) {
       case 'Sudoku':
         return "Enter your answer as comma-separated values. Example: 1,2,3,4 (representing the completed grid row by row)";
       case 'Sequence Recall':
-        return "Enter only the final answer (e.g., 359), not the sequence itself";
+        return "Enter only the final answer, not the sequence itself";
       case 'Maths Problem':
         return "Enter a short, clear answer. Avoid long explanations";
       case 'Reasoning Puzzle':
-        return "Enter only the name of the person (e.g., Mohan)";
+        return "Enter only the name of the person";
       case 'Tech Riddle':
-        return "Enter the answer in one word (e.g., Shadow)";
+        return "Enter the answer in one word";
       case 'Bonus':
-        return "Enter only the final result (e.g., W)";
+        return "Enter only the final result";
       default:
         return "Enter your answer in one word or short phrase";
     }
