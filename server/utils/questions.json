@@ -1,7 +1,7 @@
 [
   [
-    { "category": "Tech Riddle", "question": "I follow you all day but disappear at night. I mimic your every move, yet you never see me. What am I?", "answer": "Shadow", "time_limit": 180 },
-    { "category": "Maths Problem", "question": "Three friends book a hotel room for ₹300. Each pays ₹100. Later, the manager realizes the correct cost is ₹250 and sends ₹50 back with the bellboy. The bellboy keeps ₹20 and gives ₹10 to each friend. Now, each friend paid ₹90 (total ₹270). The bellboy has ₹20, making ₹290. Where did the other ₹10 go?", "answer": "The logic is flawed", "time_limit": 300 },
+    { "category": "Tech Riddle", "question": "I follow you all day but disappear at night. I mimic your every move, yet you never see me. What am I?", "answer": "shadow", "time_limit": 180 },
+    { "category": "Maths Problem", "question": "Three friends book a hotel room for ₹300. Each pays ₹100. Later, the manager realizes the correct cost is ₹250 and sends ₹50 back with the bellboy. The bellboy keeps ₹20 and gives ₹10 to each friend. Now, each friend paid ₹90 (total ₹270). The bellboy has ₹20, making ₹290. Where did the other ₹10 go?", "answer": "false", "time_limit": 300 },
     { "category": "Reasoning Puzzle", "question": "Four friends — Arjun, Priya, Kavya, and Mohan — are sitting around a table. Arjun is sitting directly opposite Priya. Kavya is to Arjun’s left. Mohan is not sitting next to Priya. Who is sitting to Priya’s right?", "answer": "Mohan", "time_limit": 300 },
     { "category": "Sudoku", "question": "Complete the 4x4 Sudoku Grid: [3, _, 4, _] [_, 1, _, 2] [4, _, 1, _] [_, 3, _, 4]", "answer": "1,2,3,4 in some order in each row, column and 2x2 box", "time_limit": 300 },
     { "category": "Sequence Recall", "question": "Memorize and find the sum of this sequence: 8, 27, 5, 12, 43, 6, 91, 3, 18, 54, 7, 11, 39, 10, 25", "answer": "359", "time_limit": 300 },

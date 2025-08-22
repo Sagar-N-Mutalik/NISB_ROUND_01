@@ -1,10 +1,32 @@
-// import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
-// const ParticipantSchema = new mongoose.Schema({
-//   name: { type: String, required: true },
-//   socketId: { type: String },
-//   isProctor: { type: Boolean, default: false },
-//   totalScore: { type: Number, default: 0 },
-// });
+const participantSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  isProctor: {
+    type: Boolean,
+    default: false
+  },
+  sessionId: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  totalScore: {
+    type: Number,
+    default: 0
+  },
+  groupId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Group'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-// export default mongoose.model("Participant", ParticipantSchema);
+export default mongoose.models.Participant || mongoose.model('Participant', participantSchema);

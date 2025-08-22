@@ -7,4 +7,13 @@ export interface IAnswer extends Document {
     pointsAwarded: number;
     timeTaken: number;
 }
-// Schema is defined on the server, this is for type safety on client
+
+const AnswerSchema = new Schema({
+    groupId: { type: Schema.Types.ObjectId, ref: 'Group', required: true },
+    participantId: { type: Schema.Types.ObjectId, ref: 'Participant', required: true },
+    questionIndex: { type: Number, required: true },
+    pointsAwarded: { type: Number, default: 0 },
+    timeTaken: { type: Number, required: true },
+});
+
+export default mongoose.models.Answer || mongoose.model("Answer", AnswerSchema);

@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar"; // This line will now work
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "🧠 Mind Mashup",
-  description: "IEEE Game Round 1",
+  title: "🏆 The Apex Gauntlet",
+  description: "IEEE Game Round 1 - Mind Mashup Challenge",
 };
 
 export default function RootLayout({ children }) {
