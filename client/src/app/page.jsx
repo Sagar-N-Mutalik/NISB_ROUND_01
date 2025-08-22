@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import styles from './page.module.css';
@@ -9,14 +9,6 @@ export default function Home() {
   const [isStarting, setIsStarting] = useState(false);
   const [error, setError] = useState(null);
   const router = useRouter();
-
-  // Check if user is already logged in
-  useEffect(() => {
-    const playerId = localStorage.getItem("playerId");
-    if (playerId) {
-      router.push("/games");
-    }
-  }, [router]);
 
   const handleStart = async () => {
     if (!name.trim()) return;
